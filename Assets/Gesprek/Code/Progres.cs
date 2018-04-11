@@ -8,10 +8,10 @@ public class Progres : MonoBehaviour
     public float blijheid = .5f;
     public Image ontevredenBalk;
 
-	public void VeranderBlijheid(float nieuweBlijheid)
+	public void VeranderBlijheid(float hoeveelBlijer)
     {
-        blijheid = nieuweBlijheid;
+        blijheid += hoeveelBlijer;
 
-        ontevredenBalk.fillAmount = blijheid;
+        ontevredenBalk.fillAmount = 1.0f - blijheid;
     }
 }

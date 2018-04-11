@@ -2,24 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-[System.Serializable]
 
+[System.Serializable]
 public class StringList
 {
     public string[] antwoorden;
 }
 
+[System.Serializable]
+public class FloatList
+{
+    public float[] waarde;
+}
+
 public class Vragen : MonoBehaviour
 {
-    public string[] teksten;
+    public StringList[] teksten;
+    public FloatList[] reactieBlijheid;
     public string[] vragen;
     public StringList[] opties;
 
     public Text spreekVak;
     public Text dialoogVak;
-    public Text[] dialoogKnoppen;
+    public Button[] dialoogKnoppen;
 
-    private int progres = 0;
+    private int progres = -1;
 
     private void Start()
     {
@@ -28,19 +35,23 @@ public class Vragen : MonoBehaviour
 
     public void VolgendeRonde()
     {
-        VulElementen(progres);
         progres++;
+        if (progres < vragen.Length)
+            VulElementen(progres);
     }
 
     private void VulElementen(int p)
     {
-        spreekVak.text = teksten[p];
         dialoogVak.text = vragen[p];
 
         int index = 0;
-        foreach (Text knop in dialoogKnoppen)
+        foreach (Button knop in dialoogKnoppen)
         {
-            knop.text = opties[p].antwoorden[index];
+            // Ik ben niet trots op deze clusterf---
+            knop.GetComponentInChildren<Text>().text = opties[p].antwoorden[index];
+            knop.GetComponent<KnopCode>().reactie = teksten[p].antwoorden[index];
+            knop.GetComponent<KnopCode>().blijheid = reactieBlijheid[p].waarde[index];
+
             index++;
         }
     }
