@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Wereld/Wereld.unity
+    guid: edbb418df9fb87b429f34a4848211d69
+  - enabled: 1
+    path: Assets/Gesprek/Gesprek Nederlander.unity
+    guid: 14b8a74eed623034ebad2d53e17541fd
+  - enabled: 1
+    path: Assets/Gesprek/Gesprek Italiaan.unity
+    guid: 34c5304949cd0c94eb7462dc654c5524
+  - enabled: 1
+    path: Assets/Gesprek/Gesprek Japanner.unity
+    guid: 356028f453235274184fec08ba101aab

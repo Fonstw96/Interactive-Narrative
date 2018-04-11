@@ -169,21 +169,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teksten:
   - antwoorden:
-    - Een ferme handdruk, daar houden wij van!
-    - Doe niet zo klef!
-    - Zitten je veters los?
+    - Eeeeey, waar is die passie?
+    - Molto bello
+    - Altijd Borst vooruit houden!
   - antwoorden:
-    - Haha, nee hoor!
-    - Jullie toeristen denken ook allemaal hetzelfde!
+    - Jij hebt teveel The Godfather gekeken.
+    - Waar heb je dat vandaan?
     - Volgens mij heb je de verkeerde.
   reactieBlijheid:
   - waarde:
+    - -0.15
     - 0.2
     - -0.15
-    - -0.15
   - waarde:
-    - 0
     - -0.2
+    - 0
     - 0
   vragen:
   - Hoe groet je de persoon?
@@ -239,7 +239,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -11.1}
-  m_SizeDelta: {x: 50, y: 3.3}
+  m_SizeDelta: {x: 50, y: 3.5}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &125456410
 MonoBehaviour:
@@ -447,7 +447,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -7.4}
-  m_SizeDelta: {x: 50, y: 3.3}
+  m_SizeDelta: {x: 50, y: 3.5}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &211917502
 MonoBehaviour:
@@ -909,7 +909,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 4, y: -14.8}
-  m_SizeDelta: {x: 50, y: 3.3}
+  m_SizeDelta: {x: 50, y: 3.5}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &711042911
 MonoBehaviour:
@@ -1401,7 +1401,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ce2586e70da7f594687e4dbaa5777a27, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 46a7d52a071dd4f4facd74c2387c631c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
