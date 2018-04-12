@@ -6,6 +6,6 @@ public class KnopTerug : MonoBehaviour
 {
 	void Start ()
     {
-        GetComponent<Button>().onClick.AddListener(delegate () { SceneManager.LoadScene(0); });
+        GetComponent<Button>().onClick.AddListener(delegate () { SceneManager.LoadScene("Wereld"); });
 	}
 }

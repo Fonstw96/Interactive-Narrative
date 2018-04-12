@@ -7,13 +7,14 @@ public class ToonKaart : MonoBehaviour
     public float aantalSeconden;
 
     private Image ik;
+    public Image mijnKind;
     private bool hetMag = false;
     private float startTijd = 0;
 
     void Start()
     {
         ik = GetComponent<Image>();
-        GetComponent<Button>().onClick.AddListener(delegate () { if (hetMag) SceneManager.LoadScene(0); });
+        GetComponent<Button>().onClick.AddListener(delegate () { if (hetMag) SceneManager.LoadScene("Wereld"); });
     }
 
     void Update()
@@ -23,9 +24,10 @@ public class ToonKaart : MonoBehaviour
             float doorzichtigheid = (Time.time - startTijd) /aantalSeconden;
 
             if (doorzichtigheid > 0)
+            {
                 ik.color = new Color(1, 1, 1, doorzichtigheid);
-            else
-                gameObject.SetActive(false);
+                mijnKind.color = new Color(1, 1, 1, doorzichtigheid);
+            }
         }
     }
 

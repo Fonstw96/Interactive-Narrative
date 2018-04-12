@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class VolgendeScene : MonoBehaviour
 {
-    public int sceneNummer;
+    public string sceneNaam;
 
 	void Start ()
     {
-        GetComponent<Button>().onClick.AddListener(delegate () { SceneManager.LoadScene(sceneNummer); });
+        GetComponent<Button>().onClick.AddListener(delegate () { SceneManager.LoadScene(sceneNaam); });
 	}
 }

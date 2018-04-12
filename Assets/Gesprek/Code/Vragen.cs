@@ -16,6 +16,7 @@ public class FloatList
 
 public class Vragen : MonoBehaviour
 {
+    public GameObject verliesTekst;
     public GameObject ansichtKaart;
 
     public StringList[] teksten;
@@ -46,7 +47,10 @@ public class Vragen : MonoBehaviour
             ansichtKaart.GetComponent<ToonKaart>().SESAMOPENU();
         }
         else
-            SceneManager.LoadScene(0);
+        {
+            verliesTekst.SetActive(true);
+            verliesTekst.GetComponent<ToonTekst>().SESAMSLUITU();
+        }
     }
 
     private void VulElementen(int p)
