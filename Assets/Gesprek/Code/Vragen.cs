@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [System.Serializable]
@@ -17,6 +16,8 @@ public class FloatList
 
 public class Vragen : MonoBehaviour
 {
+    public GameObject ansichtKaart;
+
     public StringList[] teksten;
     public FloatList[] reactieBlijheid;
     public string[] vragen;
@@ -36,8 +37,16 @@ public class Vragen : MonoBehaviour
     public void VolgendeRonde()
     {
         progres++;
+
         if (progres < vragen.Length)
             VulElementen(progres);
+        else if (GetComponent<Progres>().blijheid >= .5f)
+        {
+            ansichtKaart.SetActive(true);
+            ansichtKaart.GetComponent<ToonKaart>().SESAMOPENU();
+        }
+        else
+            SceneManager.LoadScene(0);
     }
 
     private void VulElementen(int p)
